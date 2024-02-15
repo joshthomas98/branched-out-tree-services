@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="container">
           <div className="row text-center">
             <div className="col-lg-12 col-sm-12 col-xs-12">
-              <div className="footer_menu">
+              <div className="footer_menu pt-3">
                 <ul>
                   <li>
                     <a href="/">Home</a>
@@ -34,7 +34,8 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="footer_copyright">
-                <p>© 2021 Sai. All Rights Reserved.</p>
+                <p>© 2024 Branched Out Tree Services. All Rights Reserved.</p>
+                <p>Developed by Tech Minds Consulting</p>
               </div>
               <div className="footer_profile">
                 <ul>

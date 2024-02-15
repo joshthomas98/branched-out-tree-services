@@ -228,3 +228,13 @@ body {
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
 }
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px); /* Move the card up by 5px */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+/* Add transition for smoother animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
