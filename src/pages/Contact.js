@@ -1,0 +1,150 @@
+import React from "react";
+
+const Contact = () => {
+  return (
+    <div className="container bootstrap snippets bootdeys py-5">
+      <div className="row text-center">
+        <div className="col-sm-4">
+          <div className="contact-detail-box">
+            <i className="fa fa-th fa-3x text-colored" />
+            <h4 className="pt-2">Get In Touch</h4>
+            <abbr title="Phone">P:</abbr> 07593218920
+            <br />
+            E:{" "}
+            <a href="mailto:email@email.com" className="text-muted">
+              branchedouttreeservices@gmail.com
+            </a>
+          </div>
+        </div>
+        <div className="col-sm-4">
+          <div className="contact-detail-box">
+            <i className="fa fa-map-marker fa-3x text-colored" />
+            <h4 className="pt-2">Our Location</h4>
+            <address>
+              12 Ty-Isaf Park Cir, Risca
+              <br />
+              Newport NP11 6NF
+              <br />
+            </address>
+          </div>
+        </div>
+        <div className="col-sm-4">
+          <div className="contact-detail-box">
+            <i className="fa fa-book fa-3x text-colored" />
+            <h4 className="pt-2">Book Today</h4>
+            <p>
+              Please don't hesitate to get in touch<br></br>to make enquiry
+              today.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6">
+          <div className="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.132945524721!2d-3.087044123991382!3d51.60245260375581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4871e0356b4ef6f7%3A0xf4f6db95af9a7c27!2s12%20Ty-Isaf%20Park%20Cir%2C%20Risca%2C%20Newport%20NP11%206NF!5e0!3m2!1sen!2suk!4v1708042040892!5m2!1sen!2suk"
+              width="600"
+              height="450"
+              style={{ width: "100%", height: 360 }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div className="col-sm-6">
+          <form
+            role="form"
+            name="ajax-form"
+            id="ajax-form"
+            action="https://formsubmit.io/send/coderthemes@gmail.com"
+            method="post"
+            className="form-main"
+          >
+            <div className="form-group">
+              <label htmlFor="name2">Name:</label>
+              <input
+                className="form-control"
+                id="name2"
+                name="name"
+                onblur="if(this.value == '') this.value='Name'"
+                onfocus="if(this.value == 'Name') this.value=''"
+                type="text"
+                placeholder="Name"
+              />
+              <div className="error" id="err-name" style={{ display: "none" }}>
+                Please enter name
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="email2">Email:</label>
+              <input
+                className="form-control"
+                id="email2"
+                name="email"
+                type="text"
+                onfocus="if(this.value == 'E-mail') this.value='';"
+                onblur="if(this.value == '') this.value='E-mail';"
+                placeholder="Email"
+              />
+              <div
+                className="error"
+                id="err-emailvld"
+                style={{ display: "none" }}
+              >
+                E-mail is not a valid format
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message2">Message:</label>
+              <textarea
+                className="form-control"
+                id="message2"
+                name="message"
+                rows={5}
+                onblur="if(this.value == '') this.value='Message'"
+                onfocus="if(this.value == 'Message') this.value=''"
+                placeholder="Message"
+              />
+              <div
+                className="error"
+                id="err-message"
+                style={{ display: "none" }}
+              >
+                Please enter message
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12">
+                <div id="ajaxsuccess" className="text-success">
+                  E-mail was successfully sent.
+                </div>
+                <div
+                  className="error"
+                  id="err-form"
+                  style={{ display: "none" }}
+                >
+                  There was a problem validating the form please check!
+                </div>
+                <div className="error" id="err-timedout">
+                  The connection to the server timed out!
+                </div>
+                <div className="error" id="err-state" />
+                <button
+                  type="submit"
+                  className="btn btn-primary btn-shadow btn-rounded w-md mt-2"
+                  id="send"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

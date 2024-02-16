@@ -6,6 +6,7 @@ import {
   faInstagram,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const Footer = () => {
   return (
@@ -37,37 +38,7 @@ const Footer = () => {
                 <p>© 2024 Branched Out Tree Services. All Rights Reserved.</p>
                 <p>Developed by Tech Minds Consulting</p>
               </div>
-              <div className="footer_profile">
-                <ul>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100076412066378"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faTwitter} />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <FontAwesomeIcon icon={faPinterest} />
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <SocialMediaIcons />
             </div>
           </div>
         </div>

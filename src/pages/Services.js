@@ -1,13 +1,12 @@
 import React from "react";
 import {
   IoIosLeaf,
-  IoIosCut,
   IoMdAddCircle,
   IoIosConstruct,
   IoIosHammer,
   IoIosGitBranch,
 } from "react-icons/io";
-import { MdSearch, MdHealthAndSafety } from "react-icons/md";
+import { MdHealthAndSafety } from "react-icons/md";
 import { GiAxeInStump } from "react-icons/gi";
 import { FaTree } from "react-icons/fa";
 
@@ -16,7 +15,7 @@ const Services = () => {
     <div>
       <h1 className="text-center pt-5">Our Services</h1>
 
-      <section className="pt-8 pt-md-9 pb-5">
+      <section className="pt-8 pt-md-9 pb-4">
         <div className="container">
           {/* Categories */}
           <div className="row mt-6">
