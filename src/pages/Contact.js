@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="row text-center">
         <div className="col-sm-4">
           <div className="contact-detail-box">
-            <i className="fa fa-th fa-3x text-colored" />
+            <i className="fa fa-th fa-3x text-primary" />
             <h4 className="pt-2">Get In Touch</h4>
             <abbr title="Phone">P:</abbr> 07593218920
             <br />
@@ -18,7 +18,7 @@ const Contact = () => {
         </div>
         <div className="col-sm-4">
           <div className="contact-detail-box">
-            <i className="fa fa-map-marker fa-3x text-colored" />
+            <i className="fa fa-map-marker fa-3x text-primary" />
             <h4 className="pt-2">Our Location</h4>
             <address>
               12 Ty-Isaf Park Cir, Risca
@@ -30,7 +30,7 @@ const Contact = () => {
         </div>
         <div className="col-sm-4">
           <div className="contact-detail-box">
-            <i className="fa fa-book fa-3x text-colored" />
+            <i className="fa fa-book fa-3x text-primary" />
             <h4 className="pt-2">Book Today</h4>
             <p>
               Please don't hesitate to get in touch<br></br>to make enquiry
@@ -68,8 +68,12 @@ const Contact = () => {
                 className="form-control"
                 id="name2"
                 name="name"
-                onblur="if(this.value == '') this.value='Name'"
-                onfocus="if(this.value == 'Name') this.value=''"
+                onBlur={(e) => {
+                  if (e.target.value === "") e.target.value = "Name";
+                }}
+                onFocus={(e) => {
+                  if (e.target.value === "Name") e.target.value = "";
+                }}
                 type="text"
                 placeholder="Name"
               />
@@ -84,8 +88,12 @@ const Contact = () => {
                 id="email2"
                 name="email"
                 type="text"
-                onfocus="if(this.value == 'E-mail') this.value='';"
-                onblur="if(this.value == '') this.value='E-mail';"
+                onFocus={(e) => {
+                  if (e.target.value === "E-mail") e.target.value = "";
+                }}
+                onBlur={(e) => {
+                  if (e.target.value === "") e.target.value = "E-mail";
+                }}
                 placeholder="Email"
               />
               <div
@@ -103,38 +111,20 @@ const Contact = () => {
                 id="message2"
                 name="message"
                 rows={5}
-                onblur="if(this.value == '') this.value='Message'"
-                onfocus="if(this.value == 'Message') this.value=''"
+                onBlur={(e) => {
+                  if (e.target.value === "") e.target.value = "Message";
+                }}
+                onFocus={(e) => {
+                  if (e.target.value === "Message") e.target.value = "";
+                }}
                 placeholder="Message"
               />
-              <div
-                className="error"
-                id="err-message"
-                style={{ display: "none" }}
-              >
-                Please enter message
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12">
-                <div id="ajaxsuccess" className="text-success">
-                  E-mail was successfully sent.
-                </div>
-                <div
-                  className="error"
-                  id="err-form"
-                  style={{ display: "none" }}
-                >
-                  There was a problem validating the form please check!
-                </div>
-                <div className="error" id="err-timedout">
-                  The connection to the server timed out!
-                </div>
-                <div className="error" id="err-state" />
+
+              <div className="contact-submit-button">
                 <button
-                  type="submit"
                   className="btn btn-primary btn-shadow btn-rounded w-md mt-2"
                   id="send"
+                  type="submit"
                 >
                   Submit
                 </button>

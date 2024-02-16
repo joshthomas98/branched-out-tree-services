@@ -18,6 +18,15 @@ body::before {
   }
 }
 
+/* HOMEPAGE */
+
+.homepage-tree-removal-section-image {
+  height: 100%; /* Match the height of the text container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* FOOTER */
 
 body {
@@ -281,6 +290,21 @@ body {
   transition: all 0.3s;
 }
 
+.see-more-button {
+  background-color: #ecedf0; /* Very light grey */
+  color: #000; /* Black text color */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer; /* Cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  text-decoration: none; /* Remove underline */
+}
+
+.see-more-button:hover {
+  background-color: #e0e0e0; /* Lighter grey on hover */
+}
+
 /* CONTACT */
 
 body {
@@ -327,12 +351,11 @@ body {
 }
 
 .title-box .border,
-.btn-primary,
 .back-to-top,
 .logo i,
 .question-q-box,
 .social-circle li a:hover {
-  background-color: #f16000 !important;
+  background-color: #007bff !important; /* Change to primary blue */
 }
 .title-box .title-alt,
 .text-colored,
@@ -341,11 +364,11 @@ body {
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active,
 .navbar-custom .navbar-nav li.active a {
-  color: #f16000;
+  color: #007bff; /* Change to primary blue */
 }
 
 .btn-primary {
-  border: 1px solid #f16000 !important;
+  border: 1px solid #007bff !important; /* Change to primary blue */
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -365,12 +388,12 @@ body {
 .open > .dropdown-toggle.btn-primary.focus,
 .open > .dropdown-toggle.btn-primary:focus,
 .open > .dropdown-toggle.btn-primary:hover {
-  background-color: #d85600 !important;
-  border: 1px solid #d85600 !important;
+  background-color: #007bff !important; /* Change to primary blue */
+  border: 1px solid #007bff !important; /* Change to primary blue */
 }
 
 .btn-shadow.btn-primary {
-  box-shadow: 1px 5px 9px rgba(241, 96, 1, 0.32);
+  box-shadow: 1px 5px 9px rgba(0, 123, 255, 0.32); /* Change to primary blue */
 }
 
 /*======= Responsive ======*/

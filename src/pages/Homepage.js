@@ -1,5 +1,6 @@
 import React from "react";
 import Testimonials from "../components/Testimonials";
+import FAQs from "../components/FAQs";
 
 const Homepage = () => {
   return (
@@ -31,11 +32,15 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="pt-5">
+      <section className="pt-5 bg-light">
         <Testimonials />
       </section>
 
-      <section id="learn" className="py-5">
+      <section
+        id="learn"
+        className="p-5"
+        style={{ backgroundColor: "#ecedf0" }}
+      >
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-md">
@@ -52,20 +57,28 @@ const Homepage = () => {
                 complexity.
               </p>
               <p>
-                Our team of skilled arborists specialises in tree removal, using
-                advanced techniques and equipment to tackle even the most
-                challenging tree removal projects. Whether you have a hazardous
-                tree threatening your property or simply need to clear space for
-                new construction, we have the expertise to get the job done
-                safely and effectively.
+                At Branched Out Tree Services, tree removal is our speciality.
+                With years of experience in the industry, our team of skilled
+                arborists is equipped to handle even the most challenging tree
+                removal projects. Whether you have a hazardous tree posing a
+                threat to your property or simply need to clear space for new
+                construction, we have the expertise and equipment to get the job
+                done safely and effectively.
               </p>
               <p>
-                With a focus on safety and environmental responsibility, we
-                ensure minimal disruption to your property while prioritising
-                the health of surrounding vegetation. Contact us today for
-                professional tree removal services you can rely on.
+                Our approach to tree removal prioritises safety and
+                environmental responsibility. We take every precaution to
+                minimise disruption to your property and ensure the health of
+                surrounding vegetation. From initial assessment to final
+                clean-up, you can trust us to deliver professional tree removal
+                services tailored to your specific needs.
               </p>
-              <a href="#" className="btn btn-light mt-3">
+              <p>
+                Contact us today to learn more about how our expert tree removal
+                services can help you maintain the beauty and safety of your
+                property.
+              </p>
+              <a href="/services" className="btn btn-light mt-3">
                 <i className="bi bi-chevron-right"></i> Learn More About Our
                 Tree Removal Services
               </a>
@@ -74,30 +87,8 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section id="learn" className="p-5 bg-dark text-light">
-        <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-md p-5">
-              <h2>Learn React</h2>
-              <p className="lead">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Similique deleniti possimus magnam corporis ratione facere!
-              </p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                reiciendis eius autem eveniet mollitia, at asperiores suscipit
-                quae similique laboriosam iste minus placeat odit velit quos,
-                nulla architecto amet voluptates?
-              </p>
-              <a href="#" className="btn btn-light mt-3">
-                <i class="bi bi-chevron-right"></i> Read More
-              </a>
-            </div>
-            <div className="col-md">
-              <img src="img/react.svg" className="img-fluid" alt="" />
-            </div>
-          </div>
-        </div>
+      <section id="faq" className="p-5 bg-dark text-light">
+        <FAQs />
       </section>
     </>
   );

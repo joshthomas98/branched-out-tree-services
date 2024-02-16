@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const AboutUs = () => {
+  // Ref for the text container
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    // Function to set the image height based on the text container height
+    const setImageHeight = () => {
+      const textHeight = textRef.current.clientHeight;
+      const imageElement = document.querySelector(".potoaboutwrap img");
+      imageElement.style.height = `${textHeight}px`;
+    };
+
+    // Call the function initially and on window resize
+    setImageHeight();
+    window.addEventListener("resize", setImageHeight);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", setImageHeight);
+    };
+  }, []);
+
   return (
     <>
-      <section id="about-section" className="pt-5 pb-5">
+      <section id="about-section" className="pt-5 pb-5 px-3">
         <div className="container wrapabout">
           <div className="red" />
-          <div className="row">
-            <div className="col-lg-6 align-items-center justify-content-left d-flex mb-5 mb-lg-0">
+          <div className="row align-items-center">
+            <div className="col-lg-6 mb-5 mb-lg-0" ref={textRef}>
+              {" "}
+              {/* Set ref to the text container */}
               <div className="blockabout">
                 <div className="blockabout-inner text-center text-sm-start">
                   <div className="title-big pb-3 mb-3">
@@ -59,20 +82,20 @@ const AboutUs = () => {
                     <SocialMediaIcons />
                   </div>
 
-                  <a href="#" className="btn rey-btn circular-border">
+                  <a href="#" className="see-more-button">
                     See More
                   </a>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 mt-5 mt-lg-0">
-              <figure className="potoaboutwrap">
+            <div className="col-lg-6">
+              <div className="potoaboutwrap">
                 <img
                   className="img-fluid"
-                  src="../../images/about-portrait-image.jpeg"
+                  src="../../images/about-us-image.jpg"
                   alt="potoabout"
                 />
-              </figure>
+              </div>
             </div>
           </div>
         </div>
