@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const formRef = useRef(null);
+
+  const handleSend = async (e) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData(formRef.current);
+
+      // Send form data to FormSubmit
+      await fetch("https://formsubmit.io/send/joshthomasguitarist@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+
+      // Redirect to the thank you page
+      navigate("/thankyouforemail");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Handle error here
+    }
+  };
+
   return (
     <div className="container bootstrap snippets bootdeys py-5">
       <div className="row text-center">
@@ -11,7 +36,10 @@ const Contact = () => {
             <abbr title="Phone">P:</abbr> 07593218920
             <br />
             E:{" "}
-            <a href="mailto:email@email.com" className="text-muted">
+            <a
+              href="mailto:joshua.thomas98@hotmail.co.uk"
+              className="text-muted"
+            >
               branchedouttreeservices@gmail.com
             </a>
           </div>
@@ -42,6 +70,7 @@ const Contact = () => {
       <div className="row">
         <div className="col-sm-6">
           <div className="contact-map">
+            {/* Google Maps iframe */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.132945524721!2d-3.087044123991382!3d51.60245260375581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4871e0356b4ef6f7%3A0xf4f6db95af9a7c27!2s12%20Ty-Isaf%20Park%20Cir%2C%20Risca%2C%20Newport%20NP11%206NF!5e0!3m2!1sen!2suk!4v1708042040892!5m2!1sen!2suk"
               width="600"
@@ -53,16 +82,10 @@ const Contact = () => {
             ></iframe>
           </div>
         </div>
+
         <div className="col-sm-6">
-          <form
-            role="form"
-            name="ajax-form"
-            id="ajax-form"
-            action="https://formsubmit.io/send/coderthemes@gmail.com"
-            method="post"
-            className="form-main"
-          >
-            <div className="form-group">
+          <form ref={formRef} onSubmit={handleSend} className="form-main">
+            <div className="form-group pb-2">
               <label htmlFor="name2">Name:</label>
               <input
                 className="form-control"
@@ -77,11 +100,10 @@ const Contact = () => {
                 type="text"
                 placeholder="Name"
               />
-              <div className="error" id="err-name" style={{ display: "none" }}>
-                Please enter name
-              </div>
+              {/* Error messages */}
             </div>
-            <div className="form-group">
+
+            <div className="form-group pb-2">
               <label htmlFor="email2">Email:</label>
               <input
                 className="form-control"
@@ -96,21 +118,17 @@ const Contact = () => {
                 }}
                 placeholder="Email"
               />
-              <div
-                className="error"
-                id="err-emailvld"
-                style={{ display: "none" }}
-              >
-                E-mail is not a valid format
-              </div>
+              {/* Error messages */}
             </div>
-            <div className="form-group">
+
+            <div className="form-group pb-2">
               <label htmlFor="message2">Message:</label>
               <textarea
                 className="form-control"
                 id="message2"
                 name="message"
-                rows={5}
+                rows={8}
+                style={{ height: "145px" }}
                 onBlur={(e) => {
                   if (e.target.value === "") e.target.value = "Message";
                 }}
@@ -119,16 +137,13 @@ const Contact = () => {
                 }}
                 placeholder="Message"
               />
+              {/* Error messages */}
+            </div>
 
-              <div className="contact-submit-button">
-                <button
-                  className="btn btn-primary btn-shadow btn-rounded w-md mt-2"
-                  id="send"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </div>
+            <div className="contact-submit-button pt-2">
+              <Button type="submit" className="rounded-pill">
+                Send email
+              </Button>
             </div>
           </form>
         </div>

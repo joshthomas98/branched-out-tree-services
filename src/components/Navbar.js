@@ -44,8 +44,8 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="/booknow" className="nav-link">
-                    Book Now
+                  <a href="/bookquote" className="nav-link">
+                    Book Quote
                   </a>
                 </li>
               </ul>

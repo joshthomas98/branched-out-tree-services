@@ -9,6 +9,8 @@ import Homepage from "./pages/Homepage";
 import Services from "./pages/Services";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
+import BookQuote from "./pages/BookQuote";
+import ThankYouForEmail from "./pages/ThankYouForEmail";
 
 const App = () => {
   return (
@@ -23,6 +25,10 @@ const App = () => {
           <Route path="/aboutus" element={<AboutUs />} />
 
           <Route path="/contact" element={<Contact />} />
+
+          <Route path="/bookquote" element={<BookQuote />} />
+
+          <Route path="/thankyouforemail" element={<ThankYouForEmail />} />
         </Routes>
       </Container>
       <Footer />
