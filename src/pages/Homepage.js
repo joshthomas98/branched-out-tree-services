@@ -5,7 +5,7 @@ import FAQs from "../components/FAQs";
 const Homepage = () => {
   return (
     <>
-      <section className="bg-dark text-light p-5 p-lg-0 pt-lg-3 text-center text-sm-start">
+      <section className="bg-dark text-light p-5 p-lg-0 pt-lg-3 py-sm-4 px-sm-0 text-center text-sm-start">
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-md-7">
@@ -23,7 +23,7 @@ const Homepage = () => {
             </div>
             <div className="col-md-5">
               <img
-                className="img-fluid mb-5 px-4"
+                className="img-fluid mb-5 mb-sm-2 px-4 pt-md-4 pt-sm-3"
                 src="../../images/bots-hero-image.jpeg"
                 alt="hero image"
               />
@@ -32,25 +32,25 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="pt-5 bg-light">
+      <section className="pt-5 pb-sm-5 bg-light">
         <Testimonials />
       </section>
 
       <section
         id="learn"
-        className="p-5"
+        className="px-5 pt-5 pb-0"
         style={{ backgroundColor: "#ecedf0" }}
       >
         <div className="container">
           <div className="row align-items-center justify-content-between">
-            <div className="col-md">
+            <div className="col-sm-12 col-md-12 col-lg pb-md-5">
               <img
                 src="../../images/tree-removal-homepage.jpg"
                 className="img-fluid"
                 alt="Tree Removal"
               />
             </div>
-            <div className="col-md p-5">
+            <div className="col-sm-12 col-md-12 col-lg p-5 pt-sm-4 pt-md-0">
               <h2>Expert Tree Removal Services</h2>
               <p className="lead">
                 Trust us to safely and efficiently remove trees of any size or
