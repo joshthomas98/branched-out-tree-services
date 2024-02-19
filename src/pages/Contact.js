@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <div className="container bootstrap snippets bootdeys py-5">
       <div className="row text-center">
-        <div className="col-sm-4">
+        <div className="col-sm-12 col-md-4">
           <div className="contact-detail-box">
             <i className="fa fa-th fa-3x text-primary" />
             <h4 className="pt-2">Get In Touch</h4>
@@ -44,7 +44,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <div className="col-sm-4">
+        <div className="col-sm-12 col-md-4">
           <div className="contact-detail-box">
             <i className="fa fa-map-marker fa-3x text-primary" />
             <h4 className="pt-2">Our Location</h4>
@@ -56,7 +56,7 @@ const Contact = () => {
             </address>
           </div>
         </div>
-        <div className="col-sm-4">
+        <div className="col-sm-12 col-md-4">
           <div className="contact-detail-box">
             <i className="fa fa-book fa-3x text-primary" />
             <h4 className="pt-2">Book Today</h4>

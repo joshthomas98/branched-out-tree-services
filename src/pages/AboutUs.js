@@ -25,11 +25,14 @@ const AboutUs = () => {
 
   return (
     <>
-      <section id="about-section" className="pt-5 pb-5 px-3">
+      <section id="about-section" className="pt-5 pb-5 px-2">
         <div className="container wrapabout">
           <div className="red" />
           <div className="row align-items-center">
-            <div className="col-lg-6 mb-5 mb-lg-0" ref={textRef}>
+            <div
+              className="col-sm-12 col-md-12 col-lg-6 mb-5 mb-lg-0"
+              ref={textRef}
+            >
               {" "}
               {/* Set ref to the text container */}
               <div className="blockabout">
@@ -88,7 +91,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-sm-12 col-md-12 col-lg-6 px-sm-3 px-md-5 px-lg-3">
               <div className="potoaboutwrap">
                 <img
                   className="img-fluid"

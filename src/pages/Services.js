@@ -106,7 +106,9 @@ const Services = () => {
                   <span className="icon-circle icon-circle-lg bg-pastel-primary text-primary">
                     <service.icon />
                   </span>
-                  <span className="text-dark mt-3">{service.title}</span>
+                  <span className="text-dark mt-3 text-center">
+                    {service.title}
+                  </span>
                 </div>
               </div>
             ))}
