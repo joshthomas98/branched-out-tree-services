@@ -23,7 +23,7 @@ const BookQuote = () => {
   return (
     <div>
       <div
-        className="section bg-theme-color-light overlay-dark overlay-opacity-8 bg-cover lazy"
+        className="section bg-theme-color-light overlay-dark overlay-opacity-8 bg-cover lazy px-3 py-md-5 py-sm-4"
         data-loaded="true"
         style={{
           backgroundImage: "url(https://bootdey.com/img/Content/bg1.jpg)",
@@ -40,7 +40,7 @@ const BookQuote = () => {
               {/* main title */}
               <h1 className="display-4 fw-bold mb-0 px-5">
                 <span className="d-inline-block">
-                  <span className="h6 fw-normal d-block text-align-end text-center-xs pt-sm-4">
+                  <span className="h6 fw-normal d-block text-align-end text-center-xs pt-sm-4 pt-md-0">
                     Interested in our tree services?
                   </span>
                   Book Your <br />
@@ -55,7 +55,7 @@ const BookQuote = () => {
               </p>
             </div>
             <div
-              className="col-12 col-lg-6 text-center-md text-center-xs aos-init aos-animate pb-sm-4 px-sm-4"
+              className="col-12 col-lg-6 text-center-md text-center-xs aos-init aos-animate pb-sm-4 px-sm-4 pb-md-0"
               data-aos="fade-in"
               data-aos-delay={50}
               data-aos-offset={0}
