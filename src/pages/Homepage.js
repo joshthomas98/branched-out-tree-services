@@ -8,7 +8,7 @@ const Homepage = () => {
       <section className="bg-dark text-light p-5 p-lg-0 pt-lg-3 py-sm-4 px-sm-0 text-center text-sm-start">
         <div className="container">
           <div className="row align-items-center justify-content-between">
-            <div className="col-md-7">
+            <div className="col-md-12 col-lg-7 pb-sm-0">
               <h1 className="mx-3">
                 Welcome to{" "}
                 <span className="text-warning">Branched Out Tree Services</span>
@@ -21,9 +21,9 @@ const Homepage = () => {
                 safety and environmental responsibility.
               </p>
             </div>
-            <div className="col-md-5">
+            <div className="col-md-12 col-lg-5 text-md-center">
               <img
-                className="img-fluid mb-5 mb-sm-2 px-4 pt-md-4 pt-sm-3"
+                className="img-fluid mb-sm-2 px-4 pb-lg-4 pb-md-4 pt-sm-3 pb-sm-0"
                 src="../../images/bots-hero-image.jpeg"
                 alt="hero image"
               />
