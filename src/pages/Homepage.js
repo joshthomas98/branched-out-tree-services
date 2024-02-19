@@ -50,7 +50,7 @@ const Homepage = () => {
                 alt="Tree Removal"
               />
             </div>
-            <div className="col-sm-12 col-md-12 col-lg p-5 pt-sm-4 pt-md-0">
+            <div className="col-sm-12 col-md-12 col-lg py-5 pt-sm-4 pt-md-0">
               <h2>Expert Tree Removal Services</h2>
               <p className="lead">
                 Trust us to safely and efficiently remove trees of any size or
