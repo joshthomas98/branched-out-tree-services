@@ -32,7 +32,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="pt-5 pb-sm-5 bg-light">
+      <section className="py-5 bg-light">
         <Testimonials />
       </section>
 
