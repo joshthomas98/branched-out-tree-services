@@ -30,7 +30,7 @@ const BookQuote = () => {
         }}
       >
         <div className="container">
-          <div className="row text-center-md text-center-xs d-middle justify-content-start">
+          <div className="row text-center-md text-center-xs d-middle justify-content-start py-4">
             <div
               className="col-12 col-lg-6 mb-5 text-white aos-init aos-animate"
               data-aos="fade-in"
@@ -40,7 +40,7 @@ const BookQuote = () => {
               {/* main title */}
               <h1 className="display-4 fw-bold mb-0 px-5">
                 <span className="d-inline-block">
-                  <span className="h6 fw-normal d-block text-align-end text-center-xs pt-sm-4 pt-md-0">
+                  <span className="h6 fw-normal d-block text-align-end text-center-xs">
                     Interested in our tree services?
                   </span>
                   Book Your <br />
