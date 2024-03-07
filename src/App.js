@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import BookQuote from "./pages/BookQuote";
 import ThankYouForEmail from "./pages/ThankYouForEmail";
+import Gallery from "./pages/Gallery";
 
 const App = () => {
   return (
@@ -29,6 +30,8 @@ const App = () => {
           <Route path="/bookquote" element={<BookQuote />} />
 
           <Route path="/thankyouforemail" element={<ThankYouForEmail />} />
+
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Container>
       <Footer />

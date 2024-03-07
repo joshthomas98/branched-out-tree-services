@@ -87,6 +87,44 @@ const Homepage = () => {
         </div>
       </section>
 
+      <section id="qualifications">
+        <div className="container">
+          <h2>Our Qualifications</h2>
+          <div className="qualification-item">
+            <h3>Certified Arborists</h3>
+            <p>
+              Our team consists of certified arborists who have undergone
+              extensive training and examination to ensure they have the
+              knowledge and skills required to care for trees properly.
+            </p>
+          </div>
+          <div className="qualification-item">
+            <h3>Tree Care Industry Association (TCIA) Accreditation</h3>
+            <p>
+              We are accredited by the Tree Care Industry Association,
+              demonstrating our commitment to professionalism, safety, and
+              ethical practices in tree care.
+            </p>
+          </div>
+          <div className="qualification-item">
+            <h3>ISA Certification</h3>
+            <p>
+              We hold certifications from the International Society of
+              Arboriculture (ISA), which means we adhere to the highest
+              standards of tree care practices and ethics.
+            </p>
+          </div>
+          <div className="qualification-item">
+            <h3>Years of Experience</h3>
+            <p>
+              With over [X] years of experience in the tree care industry, we
+              have encountered and successfully addressed a wide range of
+              challenges, ensuring your trees are in safe hands.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="faq" className="p-5 bg-dark text-light">
         <FAQs />
       </section>
