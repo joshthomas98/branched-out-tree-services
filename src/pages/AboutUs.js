@@ -95,7 +95,7 @@ const AboutUs = () => {
               <div className="potoaboutwrap">
                 <img
                   className="img-fluid"
-                  src="../../images/about-us-image.jpg"
+                  src="../../images/photos-sent-over/tree-site-image-14.JPG"
                   alt="potoabout"
                 />
               </div>

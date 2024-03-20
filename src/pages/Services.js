@@ -113,7 +113,7 @@ const Services = () => {
               </div>
             ))}
           </div>
-          <div className="text-center pt-4 pb-2">
+          <div className="text-center pt-3 pb-2">
             <Button onClick={navigateToBookQuote} className="rounded-pill">
               Book a free quote now
             </Button>

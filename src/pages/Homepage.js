@@ -45,7 +45,7 @@ const Homepage = () => {
           <div className="row align-items-center justify-content-between">
             <div className="col-sm-12 col-md-12 col-lg pb-md-5">
               <img
-                src="../../images/tree-removal-homepage.jpg"
+                src="../../images/photos-sent-over/tree-site-image-26.JPG"
                 className="img-fluid"
                 alt="Tree Removal"
               />
@@ -117,9 +117,9 @@ const Homepage = () => {
           <div className="qualification-item">
             <h3>Years of Experience</h3>
             <p>
-              With over [X] years of experience in the tree care industry, we
-              have encountered and successfully addressed a wide range of
-              challenges, ensuring your trees are in safe hands.
+              With many years of experience in the tree care industry, we have
+              encountered and successfully addressed a wide range of challenges,
+              ensuring your trees are in safe hands.
             </p>
           </div>
         </div>
