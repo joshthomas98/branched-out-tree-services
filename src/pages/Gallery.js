@@ -49,21 +49,15 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <div className="container py-4">
-        <div className="row">
-          {photoUrls.map((url, index) => (
-            <div className="col-sm-3 margin30" key={index}>
-              <div className="item-img-wrap">
-                <img
-                  src={url}
-                  className="img-responsive"
-                  alt={`workimg${index}`}
-                  onClick={() => openLightbox(index)}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+      <div id="photos">
+        {photoUrls.map((url, index) => (
+          <img
+            key={index}
+            src={url}
+            alt={`workimg${index}`}
+            onClick={() => openLightbox(index)}
+          />
+        ))}
       </div>
 
       {lightboxOpen && (
@@ -86,6 +80,54 @@ const Gallery = () => {
       )}
 
       <style>{`
+        #photos {
+          /* Prevent vertical gaps */
+          line-height: 0;
+          -webkit-column-count: 5;
+          -webkit-column-gap: 0px;
+          -moz-column-count: 5;
+          -moz-column-gap: 0px;
+          column-count: 5;
+          column-gap: 0px;
+        }
+
+        #photos img {
+          /* Just in case there are inline attributes */
+          width: 100% !important;
+          height: auto !important;
+          margin-bottom: 10px; /* Optional: Add some margin between images */
+        }
+
+        /* Add media queries for responsiveness */
+        @media (max-width: 1200px) {
+          #photos {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+          }
+        }
+        @media (max-width: 1000px) {
+          #photos {
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+          }
+        }
+        @media (max-width: 800px) {
+          #photos {
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+          }
+        }
+        @media (max-width: 400px) {
+          #photos {
+            -moz-column-count: 1;
+            -webkit-column-count: 1;
+            column-count: 1;
+          }
+        }
+
         .lightbox {
           position: fixed;
           top: 0;

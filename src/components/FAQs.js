@@ -101,7 +101,7 @@ function FAQAccordion() {
             </em>
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="7">
+        <Accordion.Item className="mb-3" eventKey="7">
           <Accordion.Header>Do you have insurance coverage?</Accordion.Header>
           <Accordion.Body>
             <em>
