@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import BookQuote from "./pages/BookQuote";
 import ThankYouForEmail from "./pages/ThankYouForEmail";
 import Gallery from "./pages/Gallery";
+import EmailSendingError from "./pages/EmailSendingError";
 
 const App = () => {
   return (
@@ -32,6 +33,8 @@ const App = () => {
           <Route path="/thankyouforemail" element={<ThankYouForEmail />} />
 
           <Route path="/gallery" element={<Gallery />} />
+
+          <Route path="/emailsendingerror" element={<EmailSendingError />} />
         </Routes>
       </Container>
       <Footer />

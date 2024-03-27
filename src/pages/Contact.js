@@ -36,10 +36,7 @@ const Contact = () => {
             <abbr title="Phone">P:</abbr> 07593218920
             <br />
             E:{" "}
-            <a
-              href="mailto:joshua.thomas98@hotmail.co.uk"
-              className="text-muted"
-            >
+            <a href="mailto:jobdone@live.com" className="text-muted">
               jobdone@live.com
             </a>
           </div>
