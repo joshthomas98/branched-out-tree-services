@@ -1,29 +1,29 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const navigate = useNavigate();
   const formRef = useRef(null);
 
-  const handleSend = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    try {
-      const formData = new FormData(formRef.current);
-
-      // Send form data to FormSubmit
-      await fetch("https://formsubmit.io/send/joshthomasguitarist@gmail.com", {
-        method: "POST",
-        body: formData,
-      });
-
-      // Redirect to the thank you page
-      navigate("/thankyouforemail");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      // Handle error here
-    }
+    emailjs
+      .sendForm("service_c1k2va8", "template_66mn5h7", formRef.current, {
+        publicKey: "WkMyr6_WE6UXCu5JN",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          navigate("/thankyouforemail");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -84,19 +84,13 @@ const Contact = () => {
         </div>
 
         <div className="col-sm-6">
-          <form ref={formRef} onSubmit={handleSend} className="form-main">
+          <form ref={formRef} onSubmit={sendEmail} className="form-main">
             <div className="form-group pb-2">
-              <label htmlFor="name2">Name:</label>
+              <label htmlFor="name">Name:</label>
               <input
                 className="form-control"
-                id="name2"
+                id="name"
                 name="name"
-                onBlur={(e) => {
-                  if (e.target.value === "") e.target.value = "Name";
-                }}
-                onFocus={(e) => {
-                  if (e.target.value === "Name") e.target.value = "";
-                }}
                 type="text"
                 placeholder="Name"
               />
@@ -104,37 +98,37 @@ const Contact = () => {
             </div>
 
             <div className="form-group pb-2">
-              <label htmlFor="email2">Email:</label>
+              <label htmlFor="email">Email:</label>
               <input
                 className="form-control"
-                id="email2"
+                id="email"
                 name="email"
                 type="text"
-                onFocus={(e) => {
-                  if (e.target.value === "E-mail") e.target.value = "";
-                }}
-                onBlur={(e) => {
-                  if (e.target.value === "") e.target.value = "E-mail";
-                }}
                 placeholder="Email"
               />
               {/* Error messages */}
             </div>
 
             <div className="form-group pb-2">
-              <label htmlFor="message2">Message:</label>
+              <label htmlFor="subject">Subject:</label>
+              <input
+                className="form-control"
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Subject"
+              />
+              {/* Error messages */}
+            </div>
+
+            <div className="form-group pb-2">
+              <label htmlFor="message">Message:</label>
               <textarea
                 className="form-control"
-                id="message2"
+                id="message"
                 name="message"
                 rows={8}
-                style={{ height: "145px" }}
-                onBlur={(e) => {
-                  if (e.target.value === "") e.target.value = "Message";
-                }}
-                onFocus={(e) => {
-                  if (e.target.value === "Message") e.target.value = "";
-                }}
+                style={{ height: "77px" }}
                 placeholder="Message"
               />
               {/* Error messages */}
