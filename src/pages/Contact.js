@@ -58,7 +58,7 @@ const Contact = () => {
             <i className="fa fa-book fa-3x text-primary" />
             <h4 className="pt-2">Book Today</h4>
             <p>
-              Please don't hesitate to get in touch<br></br>to make enquiry
+              Please don't hesitate to get in touch<br></br>to make an enquiry
               today.
             </p>
           </div>
