@@ -40,7 +40,7 @@ const Contact = () => {
               href="mailto:joshua.thomas98@hotmail.co.uk"
               className="text-muted"
             >
-              branchedouttreeservices@gmail.com
+              jobdone@live.com
             </a>
           </div>
         </div>
